@@ -4,8 +4,8 @@ var tRex = document.getElementById('moving-t-rex');
 var positionX = 0;
 var positionY = 0;
 
-var speedX = 5;
-var speedY = 5;
+var speedX = 3;
+var speedY = 3;
 
 function gameLoop() {
     counter.innerHTML = "X: " + positionX + ", Y: " + positionY;
