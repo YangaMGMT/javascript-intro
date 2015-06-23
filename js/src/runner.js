@@ -13,9 +13,9 @@ game.runner = function(spec){
     that.go = function(window) {
         function gameLoop() {
             counter.innerHTML = number;
-            number++;
-
             tRex.style.left = number + "px";
+
+            number = number + 1;
         }
 
         var framesPerSecond = 1000 / 60;
