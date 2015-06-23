@@ -14,6 +14,20 @@ function gameLoop() {
 
     positionX = positionX + speedX;
     positionY = positionY + speedY;
+
+    if (positionX + tRex.width >= window.innerWidth){
+        speedX = -speedX;
+    }
+    if (positionX <= 0){
+        speedX = Math.abs(speedX);
+    }
+
+    if (positionY + tRex.height >= window.innerHeight){
+        speedY = -speedY;
+    }
+    if (positionY <= 0){
+        speedY = Math.abs(speedY);
+    }
 }
 
 var framesPerSecond = 1000 / 60;
