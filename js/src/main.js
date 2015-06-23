@@ -1,14 +1,19 @@
 var counter = document.getElementById('counter');
 var tRex = document.getElementById('moving-t-rex');
 
-var position = 0;
+var positionX = 0;
+var positionY = 0;
+
+var speedX = 5;
+var speedY = 5;
 
 function gameLoop() {
-    counter.innerHTML = position;
-    tRex.style.left = position + "px";
-    tRex.style.top = "300px";
+    counter.innerHTML = "X: " + positionX + ", Y: " + positionY;
+    tRex.style.left = positionX + "px";
+    tRex.style.top = positionY + "px";
 
-    position = position + 2;
+    positionX = positionX + speedX;
+    positionY = positionY + speedY;
 }
 
 var framesPerSecond = 1000 / 60;
